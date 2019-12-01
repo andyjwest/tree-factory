@@ -1,0 +1,37 @@
+.factory{
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: #c7d3dd;
+    border-radius: 3px;
+    border: grey solid 1px;
+    max-width: 600px;
+}
+
+.factory > div:first-child{
+    display: flex;
+}
+
+.factory > div:first-child > div:first-child{
+    margin-right: auto;
+}
+
+.factory > div:last-child {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.factory > div:last-child > div{
+    margin: 5px;
+
+}
+
+.factory button {
+    border-radius: 2px;
+    padding: 2px;
+    border: solid #37393a 1px;
+}
+
+.title {
+    font-size: x-large;
+}

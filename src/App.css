@@ -1,22 +1,50 @@
-.App {
-  text-align: center;
+.App > div:last-child {
+    margin-left: 230px;
+    padding: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
+.App > div:last-child > div:first-child {
+    width: 100%;
+    color: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App > div:first-child {
+    width: 200px;
+    padding: 15px;
+    background-color: #37393a;
+    height: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    color: #e8eef2;
 }
 
-.App-link {
-  color: #09d3ac;
+.App > div:first-child > div {
+    margin: 10px;
+    font-size:14px;
+}
+
+input {
+    border: none;
+    margin: 3px;
+    border-radius: 3px;
+    padding: 2px;
+    font-size:14px;
+    background-color: #e8eef2;
+}
+
+.number {
+    max-width: 3em;
+    text-align: right;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: #d6c9c9;
+    padding: 10px;
+    margin: 3px;
+}
+
+button:hover {
+    background-color: #c3b7b7;
 }
