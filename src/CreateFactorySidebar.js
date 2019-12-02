@@ -51,6 +51,6 @@ export default function CreateFactorySidebar({sendMessage, ready}) {
                max={15}
         />
         <div/>
-        <button disabled={ready} type='submit'>Add Factory</button>
+        <button disabled={!ready} type='submit'>Add Factory</button>
     </form>
 }
