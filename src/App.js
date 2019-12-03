@@ -1,8 +1,8 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
-import CreateFactorySidebar from './CreateFactorySidebar';
 import Factory from './Factory';
 import ErrorContainer from './ErrorContainer';
+import FactoryForm from './FactoryForm';
 
 const io = require('socket.io-client');
 const socket = io('http://localhost:8080');
@@ -31,14 +31,16 @@ function App() {
       <div className="App">
         <div>
           <h1>Add a Factory</h1>
-          <CreateFactorySidebar sendMessage={addFactory} ready={connected}/>
+          <FactoryForm submitFactory={addFactory} connected={connected}
+                       buttonTitle='Add Factory' factory={{}}
+          />
         </div>
         <div>
           <ErrorContainer text={error} show={!!error}
                           clear={() => setError(undefined)}/>
-          {factories.map((it, i) => <Factory
-              deleteFactory={() => deleteFactory(it.id)} key={i}
-              updateFactory={updateFactory} {...it}/>)}
+          {factories.sort((a,b) => b.createdDate._seconds - a.createdDate._seconds).map(it => <Factory
+              deleteFactory={() => deleteFactory(it.id)} key={it.id}
+              updateFactory={updateFactory} factory={it}/>)}
         </div>
       </div>
   );

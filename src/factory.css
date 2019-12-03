@@ -1,4 +1,4 @@
-.factory{
+.factory {
     margin-bottom: 15px;
     padding: 5px;
     background-color: #c7d3dd;
@@ -7,11 +7,11 @@
     max-width: 600px;
 }
 
-.factory > div:first-child{
+.factory > div:first-child {
     display: flex;
 }
 
-.factory > div:first-child > div:first-child{
+.factory > div:first-child > div:first-child {
     margin-right: auto;
 }
 
@@ -21,7 +21,7 @@
     flex-wrap: wrap;
 }
 
-.factory > div:last-child > div{
+.factory > div:last-child > div {
     margin: 5px;
 
 }
@@ -34,4 +34,8 @@
 
 .title {
     font-size: x-large;
+}
+
+.factory button.active {
+    box-shadow: inset 0 0 2px #000000;
 }
