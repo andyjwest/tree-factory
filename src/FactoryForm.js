@@ -20,14 +20,14 @@ export default function({connected, submitFactory, buttonTitle, factory, resetAf
   };
 
   return <form onSubmit={submit}>
-    <input required type='text' value={name}
+    <input required type='text' value={name} pattern='^.{0,256}' title='Maximum of 256 characters'
            onChange={e => setName(e.target.value)} placeholder='Factory Name'/>
     <div>Range</div>
     <div>Min <input required type='number' className='number' value={min}
-                    min={0}
-                    max={499999} onChange={e => setMin(Number(e.target.value))}
-    /> - Max <input type='number' className='number' value={max} min={min}
-                    max={500000} onChange={e => setMax(Number(e.target.value))}
+                    min={Number.MIN_SAFE_INTEGER}
+                    max={Number.MAX_SAFE_INTEGER} onChange={e => setMin(Number(e.target.value))}
+    /> - Max <input type='number' className='number' value={max} min={!!min ? min : Number.MIN_SAFE_INTEGER}
+                    max={Number.MAX_SAFE_INTEGER} onChange={e => setMax(Number(e.target.value))}
                     required/>
     </div>
     <div># of Nodes</div>
