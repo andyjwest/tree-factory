@@ -32,7 +32,7 @@ function App() {
         <div>
           <h1>Add a Factory</h1>
           <FactoryForm submitFactory={addFactory} connected={connected}
-                       buttonTitle='Add Factory' factory={{}}
+                       buttonTitle='Add Factory' factory={{}} resetAfterSubmit
           />
         </div>
         <div>
